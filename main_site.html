@@ -1,0 +1,161 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"> 
+ 
+    <link rel="stylesheet" href="style.css"> 
+    <title>Your Title Here</title> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    
+</head> 
+<body> 
+  <div class="topnav" id="myTopnav">
+    <a href="main_site.html" class="logo">
+      <img src="icon.png" alt="Logo" class="logo-img">
+      <span class="logo-text">Vanee Truck Wash</span>
+    </a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="Bookings.html">Booking</a>
+    <a href="about.html">About us</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+
+
+  <div class="title">
+     <a class="title-a" href="">Vanee Truck Wash</a>
+     <h1 class="title-b">"quote"</h1>
+  </div>
+
+    <div class="contactinfo">
+      <a class="contactinfo-a" href="tel: +1 403-320-6060">  +1 403-320-6060</a>
+      <a class="contactinfo-a" href="mailto: truckwash@vaneelive.com">  truckwash@vaneelive.com</a>
+      <a class="contactinfo-a" href="https://www.google.com/maps?cid=10197179475260377286">  3716 9 Ave N, Lethbridge, AB</a>
+    </div>
+    
+    <div id="map"></div>
+    <div class="space">
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+ <script>
+
+
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+
+<script src="https://kit.fontawesome.com/f4715f90e0.js" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin="">
+</script>
+
+<script>var map = L.map('map').setView([49.71194609185915, -112.78471600721971], 13);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  var marker = L.marker([49.71194609185915, -112.78471600721971]).addTo(map);
+  
+  
+  </script>
+<script>
+  // Check if the browser supports geolocation
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else {
+      alert("Geolocation is not supported by this browser.");
+  }
+  
+  // Function to show position and display route
+  function showPosition(position) {
+      // User's coordinates
+      const userLat = position.coords.latitude;
+      const userLon = position.coords.longitude;
+      
+      // Your marker (business location)
+      const businessLat = 49.71194609185915;
+      const businessLon = -112.78471600721971;
+      
+      // Initialize the map with the user's position
+      var map = L.map('map').setView([userLat, userLon], 13);
+      
+      // Add OpenStreetMap tiles
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+  
+      // Add markers for both the user and the business
+      var userMarker = L.marker([userLat, userLon]).addTo(map).bindPopup("Your location").openPopup();
+      var businessMarker = L.marker([businessLat, businessLon]).addTo(map).bindPopup("Vanee Truck Wash").openPopup();
+      
+      // Add route between the user's location and the business using Leaflet Routing Machine
+      L.Routing.control({
+          waypoints: [
+              L.latLng(userLat, userLon),
+              L.latLng(businessLat, businessLon)
+          ],
+          routeWhileDragging: true,
+          geocoder: L.Control.Geocoder.nominatim()
+      }).addTo(map);
+  }
+  
+  // Handle any geolocation errors
+  function showError(error) {
+      switch (error.code) {
+          case error.PERMISSION_DENIED:
+              alert("User denied the request for Geolocation.");
+              break;
+          case error.POSITION_UNAVAILABLE:
+              alert("Location information is unavailable.");
+              break;
+          case error.TIMEOUT:
+              alert("The request to get user location timed out.");
+              break;
+          case error.UNKNOWN_ERROR:
+              alert("An unknown error occurred.");
+              break;
+      }
+  }
+  </script>
+  
+
+  
+</body> 
+
+
+
+
+<footer class="footer">
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+  <p>&copy; 2024 Vanee Truck Wash. All Rights Reserved.</p>
+</footer>
+</html>
