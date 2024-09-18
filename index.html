@@ -85,9 +85,10 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""><
         alert("Geolocation is not supported by this browser.");
     }
   
-    // Function to show position and display route
+    // Function to show position and display the route
     function showPosition(position) {
         console.log("Geolocation success, position obtained: ", position);
+  
         // User's coordinates
         const userLat = position.coords.latitude;
         const userLon = position.coords.longitude;
@@ -98,7 +99,7 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""><
         const businessLat = 49.71194609185915;
         const businessLon = -112.78471600721971;
   
-        // Initialize the map with the user's position
+        // Initialize the map centered on the user's position
         var map = L.map('map').setView([userLat, userLon], 13);
   
         // Add OpenStreetMap tiles
@@ -114,11 +115,15 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""><
         // Add route between the user's location and the business using Leaflet Routing Machine
         L.Routing.control({
             waypoints: [
-                L.latLng(userLat, userLon),
-                L.latLng(businessLat, businessLon)
+                L.latLng(userLat, userLon),   // User's location
+                L.latLng(businessLat, businessLon)  // Business location
             ],
-            routeWhileDragging: true,
-            geocoder: L.Control.Geocoder.nominatim()
+            // Optional parameters to improve the route's appearance and performance
+            routeWhileDragging: true,  // Recalculate route as the user drags the map
+            geocoder: L.Control.Geocoder.nominatim(), // Geocoding service for address lookup (optional)
+            lineOptions: {              // Customize the appearance of the route
+                styles: [{ color: 'blue', weight: 5 }]
+            }
         }).addTo(map);
     }
   
@@ -140,8 +145,8 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""><
                 break;
         }
     }
+  </script>
   
-    </script>
 
   
 </body> 
