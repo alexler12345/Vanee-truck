@@ -49,7 +49,6 @@
 
 
 
-    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
  <script>
 
@@ -157,4 +156,110 @@ crossorigin="">
   </div>
   <p>&copy; 2024 Vanee Truck Wash. All Rights Reserved.</p>
 </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<!-- Leaflet Routing Machine -->
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+
+
+
+<script>
+
+
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+
+<script src="https://kit.fontawesome.com/f4715f90e0.js" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin="">
+</script>
+
+<script>var map = L.map('map').setView([49.71194609185915, -112.78471600721971], 13);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  var marker = L.marker([49.71194609185915, -112.78471600721971]).addTo(map);
+  
+  
+  </script>
+<script>
+  // Check if the browser supports geolocation
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else {
+      alert("Geolocation is not supported by this browser.");
+  }
+  
+  // Function to show position and display route
+  function showPosition(position) {
+      // User's coordinates
+      const userLat = position.coords.latitude;
+      const userLon = position.coords.longitude;
+      
+      // Your marker (business location)
+      const businessLat = 49.71194609185915;
+      const businessLon = -112.78471600721971;
+      
+      // Initialize the map with the user's position
+      var map = L.map('map').setView([userLat, userLon], 13);
+      
+      // Add OpenStreetMap tiles
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+  
+      // Add markers for both the user and the business
+      var userMarker = L.marker([userLat, userLon]).addTo(map).bindPopup("Your location").openPopup();
+      var businessMarker = L.marker([businessLat, businessLon]).addTo(map).bindPopup("Vanee Truck Wash").openPopup();
+      
+      // Add route between the user's location and the business using Leaflet Routing Machine
+      L.Routing.control({
+          waypoints: [
+              L.latLng(userLat, userLon),
+              L.latLng(businessLat, businessLon)
+          ],
+          routeWhileDragging: true,
+          geocoder: L.Control.Geocoder.nominatim()
+      }).addTo(map);
+  }
+  
+  // Handle any geolocation errors
+  function showError(error) {
+      switch (error.code) {
+          case error.PERMISSION_DENIED:
+              alert("User denied the request for Geolocation.");
+              break;
+          case error.POSITION_UNAVAILABLE:
+              alert("Location information is unavailable.");
+              break;
+          case error.TIMEOUT:
+              alert("The request to get user location timed out.");
+              break;
+          case error.UNKNOWN_ERROR:
+              alert("An unknown error occurred.");
+              break;
+      }
+  }
+  </script>
+  
+
+
+
+
+
 </html>
