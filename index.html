@@ -109,7 +109,7 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""><
         }).addTo(map);
   
         // Add markers for both the user and the business
-        var userMarker = L.icon({iconUrl: 'user icon.png',
+        var userIcon = L.icon({iconUrl: 'user icon.png',
           iconSize:     [38, 95], // size of the icon
           shadowSize:   [50, 64], // size of the shadow
           iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
@@ -117,7 +117,7 @@ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""><
           popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
             });
 
-        //var userMarker = L.marker([userLat, userLon]).addTo(map).bindPopup("Your location").openPopup();
+        var userMarker = L.marker([userLat, userLon],{icon:userIcon}).addTo(map).bindPopup("Your location").openPopup();
         var businessMarker = L.marker([businessLat, businessLon]).addTo(map).bindPopup("Vanee Truck Wash").openPopup();
   
         // Add route between the user's location and the business using Leaflet Routing Machine
