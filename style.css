@@ -18,12 +18,11 @@ p {
 .topnav {
     background: linear-gradient(90deg, #333 0%, #555 100%);
     overflow: hidden;
-    position: sticky;
+   
     top: 0;
     width: 100%;
     z-index: 1000;
-   padding-right: 10px;
-    
+ 
     padding-top: 10px;
     padding-bottom: 10px;
     transition: background 0.3s;
@@ -264,7 +263,10 @@ a:link{
     margin-right: 10px;
   }
   
-  #map { height: 180px; }
+  .maps{
+    border: 0;
+
+  }
   
 
  
