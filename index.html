@@ -47,50 +47,53 @@
 
   </div>
 
-     <div class="photos">
-      
-      <div class="slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="image1.jpg" style="width:100%">
-          <div class="text">Caption Text</div>
-        </div>
-      
-        <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="image2.jpg" style="width:100%">
-          <div class="text">Caption Two</div>
-        </div>
-      
-        <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="image3.jpg" style="width:100%">
-          <div class="text">Caption Three</div>
-        </div>
-      
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-      <br>
-      
-      <!-- The dots/circles -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-
-     </div>
+    
 
     <div class="maps">
     <iframe class="maps-i" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14595.262829162146!2d-112.78889920314327!3d49.70887519830226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x536e8710830c5649%3A0x8d83a8b4adcc88c6!2sVanee%20Truck%20Wash!5e0!3m2!1sen!2sca!4v1726847676663!5m2!1sen!2sca" height="500px" width="95%" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
   </div>
 
  
+  <div class="photos">
+    <div class="carousel-container">
+      <!-- Button for previous image -->
+      <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+  
+      <!-- Container for images -->
+      <div class="carousel-images">
+          <img src="image1.jpg" alt="Image 1">
+          <img src="image2.jpg" alt="Image 2">
+          <img src="image3.jpg" alt="Image 3">
+      </div>
+  
+      <!-- Button for next image -->
+      <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  
+  <script>
+      let currentSlide = 0; // Track the current image index
+      const slides = document.querySelectorAll('.carousel-images img');
+      const totalSlides = slides.length;
+  
+      function moveSlide(direction) {
+          currentSlide += direction;
+  
+          // Loop back to the beginning/end if out of bounds
+          if (currentSlide < 0) {
+              currentSlide = totalSlides - 1;
+          } else if (currentSlide >= totalSlides) {
+              currentSlide = 0;
+          }
+  
+          // Update the position of the carousel
+          const carouselImages = document.querySelector('.carousel-images');
+          const slideWidth = slides[0].clientWidth; // Get the width of an individual slide
+          carouselImages.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+      }
+  </script>
+  
 
+   </div>
 
     <div class="space">
 
@@ -106,7 +109,8 @@
 
 
  <script>
-
+window.addEventListener('resize', adjustIframeWidth);
+adjustIframeWidth(); // Adjust on initial load
 
   /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
   function myFunction() {
@@ -124,14 +128,12 @@
     document.getElementById('map').style.width = newWidth;
   }
 
-  window.addEventListener('resize', adjustIframeWidth);
-  adjustIframeWidth(); // Adjust on initial load
+  
 
 </script>
 
 <script src="https://kit.fontawesome.com/f4715f90e0.js" crossorigin="anonymous"></script>
 
-  
 
   
 </body> 
