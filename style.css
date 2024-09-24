@@ -1,5 +1,7 @@
 
-
+*{
+  -webkit-tap-highlight-color: transparent;
+}
 
 
 body {
@@ -10,13 +12,49 @@ body {
 }
 
 h1 {
-  color: #007BFF;
+  
   font-size: 36px;
 }
 
 p {
   font-size: 18px;
 }
+
+/* Remove blue outline when button is clicked */
+.topnav a:focus, .contactinfo-a:focus, .title-a:focus, .prev:focus, .next:focus {
+  outline: none;
+  box-shadow: none; /* Optionally remove shadow if it changes on focus */
+}
+/* Custom focus style */
+.topnav a:focus, .contactinfo-a:focus, .title-a:focus, .prev:focus, .next:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgb(0, 123, 255); /* Custom focus shadow */
+}
+
+
+/* Basic button style */
+.topnav a, .contactinfo-a, .title-a, .prev, .next {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Adding shadow */
+}
+
+/* Hover effect */
+.topnav a:hover, .contactinfo-a:hover, .title-a:hover, .prev:hover, .next:hover {
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15); /* Reduced shadow on hover */
+  transform: translateY(-2px); /* Slight movement upwards */
+}
+
+/* Click effect */
+.topnav a:active, .contactinfo-a:active, .title-a:active, .prev:active, .next:active {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Less shadow when clicked */
+  transform: translateY(2px); /* Move the button down slightly */
+}
+
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -33,10 +71,12 @@ p {
 
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  box-shadow:2px 2px 5px gray;
 }
 
 .logo-text:hover {
   color: #04AA6D;
+  box-shadow: 2px 2px 5px gray;
   /* Adding hover effect for logo text */
 }
 
