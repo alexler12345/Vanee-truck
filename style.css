@@ -343,7 +343,7 @@ a:link {
 }
 
 .photos {
-
+  padding-top: 10px;
 
   /* Styling for the carousel container */
   .carousel-container {
