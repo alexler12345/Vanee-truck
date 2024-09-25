@@ -16,8 +16,6 @@ p {
   font-size: 18px;
 }
 
-
-
 /* Custom focus style */
 .topnav a:focus,
 .contactinfo-a:focus,
@@ -68,7 +66,9 @@ p {
   /* Less shadow when clicked */
   transform: translateY(2px);
   /* Move the button down slightly */
+
 }
+
 .menu{
 /* Add a black background color to the top navigation */
 .topnav {
@@ -266,8 +266,6 @@ p {
 
 }
 
-
-
 .title {
   display: flex;
 
@@ -278,9 +276,6 @@ p {
   border-bottom: 1px solid #e9ecef;
 
 }
-
-
-
 
 .title-b {
   font-size: 16px;
@@ -295,7 +290,7 @@ a:link {
   text-decoration: none !important;
 }
 
-
+.contactinfoMain{
 
 .contactinfo {
   display: flex;
@@ -325,7 +320,6 @@ a:link {
   margin-right: 10px;
 }
 
-/* Example icons */
 .contactinfo-a:first-child::before {
   content: '\f095';
   font-family: 'FontAwesome';
@@ -343,6 +337,8 @@ a:link {
   font-family: 'FontAwesome';
   margin-right: 10px;
 }
+}
+
 
 .photos {
   padding-top: 20px;
@@ -421,12 +417,9 @@ a:link {
 
 .times {}
 
-
 .space {
-
   padding-top: 500px;
 }
-
 
 .footer {
   background-color: #333;
@@ -449,7 +442,6 @@ a:link {
 .social-icons a:hover {
   color: #04AA6D;
 }
-
 
 /*pc or lager*/
 @media screen and (min-width: 601px) {
@@ -482,10 +474,6 @@ a:link {
   }
   
 }
-
-
-
-
 
 @media (prefers-color-scheme: light) {
   body {}
