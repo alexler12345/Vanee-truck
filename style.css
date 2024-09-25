@@ -23,7 +23,8 @@ p {
 .contactinfo-a:focus,
 .title-a:focus,
 .prev:focus,
-.next:focus {
+.next:focus
+ {
   outline: none;
   box-shadow: 0px 0px 10px rgb(0, 123, 255);
   /* Custom focus shadow */
@@ -33,7 +34,7 @@ p {
 .topnav a:not(.logo,.icon),
 .contactinfo-a,
 .prev,
-.next {
+.next{
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -334,8 +335,8 @@ a:link {
 }
 
 .photos {
-
-
+  padding-top: 20px;
+  background-color: #f9f9f9;
   /* Styling for the carousel container */
   .carousel-container {
     width: 80%;
@@ -343,6 +344,8 @@ a:link {
     overflow: hidden;
     /* Hide overflowing images */
     position: relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
   }
 
   /* Styling for the image container */
@@ -365,8 +368,8 @@ a:link {
   /* Prev/Next buttons */
   .carousel-button {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 43%;
+   
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -395,6 +398,8 @@ a:link {
 
   display: flex;
   justify-content: center;
+  padding-bottom: 27px;
+  border-bottom: 1px solid #e9ecef;
 
 }
 
