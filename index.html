@@ -1,147 +1,131 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"> 
- 
-    <link rel="stylesheet" href="style.css"> 
-    <title>Your Title Here</title> 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
-  
-</head> 
-<body> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Your Title Here</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+</head>
+
+<body>
 
 
- <div class="menu">
-  <div class="topnav" id="myTopnav">
-    <a href="" class="logo">
-      <img src="icon.png" alt="Logo" class="logo-img">
-      
-    </a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="Bookings.html">Booking</a>
-    <a href="about.html">About us</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  <div class="menu">
+    <div class="topnav" id="myTopnav">
+      <a href="" class="logo">
+        <img src="icon.png" alt="Logo" class="logo-img">
+
+      </a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="Bookings.html">Booking</a>
+      <a href="about.html">About us</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
   </div>
 
-</div>
-
   <div class="title">
-     <a class="title-a" href="">Vanee Truck Wash</a>
-     <h1 class="title-b">"Where Big Rigs Shine and Trailers Sparkle"</h1>
+    <a class="title-a" href="">Vanee Truck Wash</a>
+    <h1 class="title-b">"Where Big Rigs Shine and Trailers Sparkle"</h1>
   </div>
 
   <div class="contactinfoMain">
     <div class="contactinfo">
-      <a class="contactinfo-a" href="tel: +1 403-320-6060">  +1 403-320-6060</a>
-      <a class="contactinfo-a" href="mailto: truckwash@vaneelive.com">  truckwash@vaneelive.com</a>
-      <a class="contactinfo-a" href="https://www.google.com/maps?cid=10197179475260377286">  3716 9 Ave N, Lethbridge, AB</a>
+      <a class="contactinfo-a" href="tel: +1 403-320-6060"> +1 403-320-6060</a>
+      <a class="contactinfo-a" href="mailto: truckwash@vaneelive.com"> truckwash@vaneelive.com</a>
+      <a class="contactinfo-a" href="https://www.google.com/maps?cid=10197179475260377286"> 3716 9 Ave N, Lethbridge,
+        AB</a>
     </div>
-</div>
-    
+  </div>
+
   <div class="times">
 
 
   </div>
 
-    
 
-    <div class="maps">
-    <iframe class="maps-i" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14595.262829162146!2d-112.78889920314327!3d49.70887519830226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x536e8710830c5649%3A0x8d83a8b4adcc88c6!2sVanee%20Truck%20Wash!5e0!3m2!1sen!2sca!4v1726847676663!5m2!1sen!2sca" height="500px" width="95%" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+
+  <div class="maps">
+    <iframe class="maps-i"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14595.262829162146!2d-112.78889920314327!3d49.70887519830226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x536e8710830c5649%3A0x8d83a8b4adcc88c6!2sVanee%20Truck%20Wash!5e0!3m2!1sen!2sca!4v1726847676663!5m2!1sen!2sca"
+      height="500px" width="95%" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
   </div>
 
- 
+
   <div class="photos">
     <div class="carousel-container">
       <!-- Button for previous image -->
       <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
-  
+
       <!-- Container for images -->
       <div class="carousel-images">
-          <img src="image1.jpg" alt="Image 1">
-          <img src="image2.jpg" alt="Image 2">
-          <img src="image3.jpg" alt="Image 3">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
       </div>
-  
+
       <!-- Button for next image -->
       <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
-  </div>
-  
-  <script>
+    </div>
+
+    <script>
       let currentSlide = 0; // Track the current image index
       const slides = document.querySelectorAll('.carousel-images img');
       const totalSlides = slides.length;
-  
+
       function moveSlide(direction) {
-          currentSlide += direction;
-  
-          // Loop back to the beginning/end if out of bounds
-          if (currentSlide < 0) {
-              currentSlide = totalSlides - 1;
-          } else if (currentSlide >= totalSlides) {
-              currentSlide = 0;
-          }
-  
-          // Update the position of the carousel
-          const carouselImages = document.querySelector('.carousel-images');
-          const slideWidth = slides[0].clientWidth; // Get the width of an individual slide
-          carouselImages.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+        currentSlide += direction;
+
+        // Loop back to the beginning/end if out of bounds
+        if (currentSlide < 0) {
+          currentSlide = totalSlides - 1;
+        } else if (currentSlide >= totalSlides) {
+          currentSlide = 0;
+        }
+
+        // Update the position of the carousel
+        const carouselImages = document.querySelector('.carousel-images');
+        const slideWidth = slides[0].clientWidth; // Get the width of an individual slide
+        carouselImages.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
       }
-  </script>
-  
+    </script>
 
-   </div>
+  </div>
 
-    <div class="space">
-
-    </div>
+  <div class="space">
+  </div>
 
 
 
+  <script src="https://kit.fontawesome.com/f4715f90e0.js" crossorigin="anonymous">
 
-
-
-
-
-
-
- <script>
-
-
-
-  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
     }
-  }
 
-  
-
-
-</script>
-
-<script src="https://kit.fontawesome.com/f4715f90e0.js" crossorigin="anonymous"></script>
-
-
-  
-</body> 
-
-
-
+  </script>
+</body>
 
 <footer class="footer">
   <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=61558004790927" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=61558004790927" target="_blank"><i
+        class="fab fa-facebook-f"></i></a>
     <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
     <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
   </div>
   <p>&copy; 2024 Vanee Truck Wash. All Rights Reserved.</p>
 </footer>
+
 </html>
