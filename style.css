@@ -90,6 +90,7 @@ p {
 
 
 
+
 .logo-text:hover {
   
   box-shadow: 2px 2px 5px gray;
@@ -415,7 +416,9 @@ a:link {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.times {}
+.times {
+  border: 30px solid green;
+}
 
 .space {
   padding-top: 500px;
