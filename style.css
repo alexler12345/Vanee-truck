@@ -418,6 +418,12 @@ a:link {
 
 .times {
   border: 30px solid green;
+  padding-bottom: 30px;
+
+  .OpeningT{
+
+    
+  }
 }
 
 .space {
