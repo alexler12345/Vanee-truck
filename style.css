@@ -284,6 +284,7 @@ p {
   color: #555;
   font-style: italic;
   color: #4e66f8;
+  padding-left: 6%;
   
 }
 
@@ -420,7 +421,7 @@ a:link {
 .timeMain {
   padding-bottom: 5px;
   border-bottom: 1px solid #e9ecef;
-}
+
 
 /* General Styles */
 .times {
@@ -532,7 +533,7 @@ table.openinghours tr#Sunday td {
   color: #721c24;
   font-weight: bold;
 }
-
+}
 
 .space {
   padding-top: 500px;
