@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,7 @@
   <title>Your Title Here</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  
+
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 
   <div class="menu">
     <div class="topnav" id="myTopnav">
-      
+
       <a href="" class="logo">
         <img src="icon.png" alt="Logo" class="logo-img">
 
@@ -46,44 +46,48 @@
         AB</a>
     </div>
   </div>
-
-  <div class="times">
+  <div class="timeMain">
+    <div class="times">
       <div class="card-header">
-          <div class="media-body">
-            <h4 class="OpeningT">Opening Hours</h4>
-          </div>
-          <i class="far fa-clock fa-3x" style="opacity: 0.2"></i>
+        <div class="media-body">
+          <h4 class="OpeningT">Opening Hours</h4>
+        </div>
+        <i class="far fa-clock fa-3x" style="opacity: 0.2"></i>
       </div>
-      <table class="table text-sm mb-0 openinghours">
-        <tbody><tr id="Monday">
-          <th>Monday</th>
-          <td class="text-right">8 AM–5 PM</td>
-        </tr>
-        <tr id="Tuesday">
-          <th>Tuesday</th>
-          <td class="text-right">8 AM–5 PM</td>
-        </tr>
-        <tr id="Wednesday">
-          <th>Wednesday</th>
-          <td class="text-right">8 AM–5 PM</td>
-        </tr>
-        <tr id="Thursday" class="table-success">
-          <th>Thursday</th>
-          <td class="text-right">8 AM–5 PM</td>
-        </tr>
-        <tr id="Friday">
-          <th>Friday</th>
-          <td class="text-right">8 AM–5 PM</td>
-        </tr>
-        <tr id="Saturday">
-          <th>Saturday</th>
-          <td class="text-right">Closed</td>
-        </tr>
-        <tr id="Sunday">
-          <th>Sunday</th>
-          <td class="text-right">Closed</td>
-        </tr>
-      </tbody></table>
+      <table class="openinghours">
+        <tbody>
+          <tr id="Monday">
+            <th>Monday</th>
+            <td class="text-right">8 AM–5 PM</td>
+          </tr>
+          <tr id="Tuesday">
+            <th>Tuesday</th>
+            <td class="text-right">8 AM–5 PM</td>
+          </tr>
+          <tr id="Wednesday">
+            <th>Wednesday</th>
+            <td class="text-right">8 AM–5 PM</td>
+          </tr>
+          <tr id="Thursday">
+            <th>Thursday</th>
+            <td class="text-right">8 AM–5 PM</td>
+          </tr>
+          <tr id="Friday">
+            <th>Friday</th>
+            <td class="text-right">8 AM–5 PM</td>
+          </tr>
+          <tr id="Saturday">
+            <th>Saturday</th>
+            <td class="text-right">Closed</td>
+          </tr>
+          <tr id="Sunday">
+            <th>Sunday</th>
+            <td class="text-right">Closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 
 
@@ -155,14 +159,72 @@
     }
 
 
-   
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get current day and time
+      const currentDay = new Date().toLocaleString("en-US", { weekday: "long" });
+      const currentTime = new Date();
+
+      // Set opening and closing times for each day (24-hour format)
+      const hours = {
+        Monday: { open: 8, close: 17 },
+        Tuesday: { open: 8, close: 17 },
+        Wednesday: { open: 8, close: 17 },
+        Thursday: { open: 8, close: 17 },
+        Friday: { open: 8, close: 17 },
+        Saturday: { open: null, close: null },
+        Sunday: { open: null, close: null },
+      };
+
+      // Loop through the days in the table
+      const rows = document.querySelectorAll("tbody tr");
+      rows.forEach((row) => {
+        const day = row.id;
+        const timeCell = row.querySelector("td.text-right");
+
+        // Highlight the current day with a class instead of inline styles
+        if (day === currentDay) {
+          row.classList.add("current-day");
+
+        }
+
+        // Get all <th> elements in the table header
+        const tableHeaders = document.querySelectorAll("tbody tr th");
+
+        tableHeaders.forEach((header) => {
+          const day = header.parentElement.id; // Get the day from the parent row's ID
+
+          // Highlight the current day's <th> element if the day matches the currentDay
+          if (day === currentDay) {
+            header.classList.add("current-day-day");
+          }
+        });
+
+
+        // Determine if the business is open or closed for today
+        const openTime = hours[day]?.open;
+        const closeTime = hours[day]?.close;
+
+        if (openTime !== null && closeTime !== null) {
+          const isOpen =
+            currentTime.getHours() >= openTime && currentTime.getHours() < closeTime;
+
+          // Append "Open Now" or "Closed Now" status to the current day's time
+          if (day === currentDay) {
+            const statusClass = isOpen ? "open-now" : "closed-now";
+            timeCell.classList.add(statusClass);
+          }
+        }
+      });
+    });
+
+
 
   </script>
   <script src="https://kit.fontawesome.com/f4715f90e0.js" crossorigin="anonymous"></script>
 
- 
-  
-  
+
+
+
 </body>
 
 <footer class="footer">

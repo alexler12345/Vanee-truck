@@ -399,7 +399,7 @@ a:link {
 }
 
 .maps {
-  padding-top: 10px;
+  padding-top: 27px;
   border: 10px;
   background-color: #f9f9f9;
 
@@ -407,6 +407,7 @@ a:link {
   justify-content: center;
   padding-bottom: 27px;
   border-bottom: 1px solid #e9ecef;
+
 
 }
 
@@ -416,15 +417,122 @@ a:link {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.times {
-  border: 30px solid green;
-  padding-bottom: 30px;
-
-  .OpeningT{
-
-    
-  }
+.timeMain {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e9ecef;
 }
+
+/* General Styles */
+.times {
+  max-width: 83%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.OpeningT {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+}
+
+i.far {
+  color: #333;
+}
+
+/* Table Styles */
+table.openinghours {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+
+table.openinghours th:not(.current-day-day,.open-now) ,
+table.openinghours td:not(.current-day-day,.open-now) {
+  padding: 12px 15px;
+  text-align: left;
+  border-radius: 5px; /* Add a radius to all table cells */
+}
+
+table.openinghours th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table.openinghours td {
+  background-color: #e9ecef;
+}
+
+/* Current Day Highlight */
+.current-day th,
+.current-day td {
+  background-color: #28a745 !important; /* Green for the current day */
+  color: white !important;
+
+}
+.current-day-day{
+  padding: 12px 15px;
+  text-align: left;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.open-now{
+  padding: 12px 15px;
+  text-align: left;
+ border-top-right-radius: 5px;
+ border-bottom-right-radius: 5px;
+
+}
+
+/* Open Now and Closed Now Labels */
+.open-now::after {
+  content: " (Open Now)";
+  color: green;
+  font-weight: bold;
+}
+
+.closed-now::after {
+  content: " (Closed Now)";
+  color: red;
+  font-weight: bold;
+}
+
+/* Highlighted Row */
+table.openinghours tr.table-success th,
+table.openinghours tr.table-success td {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Hover Effect */
+table.openinghours tr:hover th,
+table.openinghours tr:hover td {
+  background-color: #d1ecf1;
+  color: #333;
+}
+
+/* Closed Days Styling */
+table.openinghours tr#Saturday td,
+table.openinghours tr#Sunday td {
+  background-color: #f8d7da;
+  color: #721c24;
+  font-weight: bold;
+}
+
 
 .space {
   padding-top: 500px;
