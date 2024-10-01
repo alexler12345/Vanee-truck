@@ -1,38 +1,126 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="style.css"> 
-    <title>Your Title Here</title> 
-</head> 
-<body> 
+<!DOCTYPE html>
+<html lang="en">
+  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <script src="bookingScript.js"></script>
+  <link rel="stylesheet" href="bookingStyle.css">
+  <title>Vanee Truck Wash</title>
+</head>
+
+<body>
+
+ <!-- header.html -->
+ <div class="menu">
   <div class="topnav" id="myTopnav">
-    <a href="index.html" class="logo">
-      <img src="icon.png" alt="Logo" class="logo-img">
-      <span class="logo-text">Vanee Truck Wash</span>
-      
+    <a href="" class="logo">
+      <img src="/images/icon.png" alt="Logo" class="logo-img">
     </a>
-   
-    <a href="#news">News</a>
+    <a href="/product/product.html">Products</a>
     <a href="#contact">Contact</a>
-    <a href="Bookings.html">Booking</a>
-    <a href="about.html">About us</a>
+    <a href="/booking/Bookings.html">Booking</a>
+    <a href="/aboutus/about.html">About us</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
+</div>
 
-    <h1>Booking</h1> 
-    <p>This is a simple HTML and CSS example.</p> 
- <script>
-  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-</script>
-</body> 
+  <div class="title">
+    <h1 class="title-a" href="">Vanee Truck Wash</h1>
+    <h1 class="title-b">"Where Big Rigs Shine and Trailers Sparkle"</h1>
+  </div>
+
+  <div class="contactinfoMain">
+    <div class="contactinfo">
+      <a class="contactinfo-a" href="tel: +1 403-320-6060"> +1 403-320-6060</a>
+      <a class="contactinfo-a" href="mailto: truckwash@vaneelive.com"> truckwash@vaneelive.com</a>
+      <a class="contactinfo-a" href="https://www.google.com/maps?cid=10197179475260377286"> 3716 9 Ave N, Lethbridge,
+        AB</a>
+    </div>
+  </div>
+
+  <div class="timeMain">
+    <div class="times">
+      <div class="card-header">
+        <div class="media-body">
+          <h4 class="OpeningT">Opening Hours</h4>
+        </div>
+        <i class="far fa-clock fa-3x" style="opacity: 0.2"></i>
+      </div>
+      <table class="openinghours">
+        <tbody>
+          <tr id="Monday">
+            <th>Monday</th>
+            <td class="text-right">8 AM–5 PM</td>
+          </tr>
+          <tr id="Tuesday">
+            <th>Tuesday</th>
+            <td class="text-right">8 AM–5 PM</td>
+          </tr>
+          <tr id="Wednesday">
+            <th>Wednesday</th>
+            <td class="text-right">8 AM–5 PM</td>
+          </tr>
+          <tr id="Thursday">
+            <th>Thursday</th>
+            <td class="text-right">8 AM–5 PM</td>
+          </tr>
+          <tr id="Friday">
+            <th>Friday</th>
+            <td class="text-right">8 AM–5 PM</td>
+          </tr>
+          <tr id="Saturday">
+            <th>Saturday</th>
+            <td class="text-right">Closed</td>
+          </tr>
+          <tr id="Sunday">
+            <th>Sunday</th>
+            <td class="text-right">Closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="maps">
+    <iframe class="maps-i"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14595.262829162146!2d-112.78889920314327!3d49.70887519830226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x536e8710830c5649%3A0x8d83a8b4adcc88c6!2sVanee%20Truck%20Wash!5e0!3m2!1sen!2sca!4v1726847676663!5m2!1sen!2sca"
+      height="500px" width="95%" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+  </div>
+
+  <div class="photos">
+    <div class="carousel-container">
+      <!-- Button for previous image -->
+      <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+
+      <!-- Container for images -->
+      <div class="carousel-images">
+        <img src="images/image1.jpg" alt="Image 1">
+        <img src="images/image2.jpg" alt="Image 2">
+        <img src="images/image3.jpg" alt="Image 3">
+      </div>
+
+      <!-- Button for next image -->
+      <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <div class="space">
+  </div>
+
+  <script src="https://kit.fontawesome.com/f4715f90e0.js" crossorigin="anonymous"></script>
+
+</body>
+
+<footer class="footer">
+  <div class="social-icons">
+    <a href="https://www.facebook.com/profile.php?id=61558004790927" target="_blank"><i
+        class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+  <p>&copy; 2024 Vanee Truck Wash. All Rights Reserved.</p>
+</footer>
+
 </html>
