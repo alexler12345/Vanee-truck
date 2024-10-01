@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Run includeHTML when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", includeHTML);
+
 
 
 // Navbar responsive toggle
