@@ -87,3 +87,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Run includeHTML when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", includeHTML);
+
+
+// Navbar responsive toggle
+function myFunction() {
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+  x.className += " responsive";
+} else {
+  x.className = "topnav";
+}
+}
