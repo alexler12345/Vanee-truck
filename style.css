@@ -284,7 +284,7 @@ p {
   color: #555;
   font-style: italic;
   color: #4e66f8;
-  padding-left: 6%;
+  
   
 }
 
@@ -292,7 +292,7 @@ a:link {
   text-decoration: none !important;
 }
 
-.contactinfoMain{
+
 
 .contactinfo {
   display: flex;
@@ -301,9 +301,9 @@ a:link {
   background-color: #f9f9f9;
   border-radius: 5px;
   max-width: 400px;
-  margin: 0 auto;
+  
   align-items: flex-start;
-  border-bottom: 1px solid #e9ecef;
+  
 
 
 }
@@ -339,7 +339,7 @@ a:link {
   font-family: 'FontAwesome';
   margin-right: 10px;
 }
-}
+
 
 
 .photos {
@@ -418,22 +418,44 @@ a:link {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.timeMain {
-  padding-bottom: 5px;
-  border-bottom: 1px solid #e9ecef;
-
 
 /* General Styles */
 .times {
-  max-width: 83%;
-  margin: 20px auto;
+  
+  
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
 }
+/*pc*/
+@media  screen and (min-width: 601px) {
 
+  .pclooks{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+  }
+
+}
+/*phone*/
+@media  screen and (max-width: 600px) {
+  .times{
+    max-width: 83%;
+    margin: 20px auto;
+  }
+
+  .timeMain {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e9ecef;
+  
+  }
+
+  .contactinfo{
+    border-bottom: 1px solid #e9ecef;
+  }
+}
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -533,7 +555,7 @@ table.openinghours tr#Sunday td {
   color: #721c24;
   font-weight: bold;
 }
-}
+
 
 .space {
   padding-top: 500px;
@@ -571,13 +593,9 @@ table.openinghours tr#Sunday td {
     font-weight: 600;
   }
 
-  .contactinfo {
-    margin: 0px;
-  }
+  
 
-  .maps{
-    
-  }
+  
 }
 
 /*phone or smaller*/
@@ -588,9 +606,9 @@ table.openinghours tr#Sunday td {
     font-size: 11vw;
     /* Larger, bold text for title */
     font-weight: 600;
-
+    
   }
-  
+
 }
 
 @media (prefers-color-scheme: light) {
