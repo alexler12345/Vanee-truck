@@ -21,18 +21,17 @@ p {
 .contactinfo-a:focus,
 .title-a:focus,
 .prev:focus,
-.next:focus
- {
+.next:focus {
   outline: none;
   box-shadow: 0px 0px 10px rgb(0, 123, 255);
   /* Custom focus shadow */
 }
 
 /* Basic button style */
-.topnav a:not(.logo,.icon),
+.topnav a:not(.logo, .icon),
 .contactinfo-a,
 .prev,
-.next{
+.next {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -69,195 +68,196 @@ p {
 
 }
 
-.menu{
-/* Add a black background color to the top navigation */
-.topnav {
-  background: linear-gradient(90deg, #333 0%, #555 100%);
-  overflow: hidden;
+.menu {
 
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+  /* Add a black background color to the top navigation */
+  .topnav {
+    background: linear-gradient(90deg, #333 0%, #555 100%);
+    overflow: hidden;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
-  transition: background 0.3s;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 2px 2px 5px gray;
-}
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: background 0.3s;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+  }
 
 
 
 
-.logo-text:hover {
-  
-  box-shadow: 2px 2px 5px gray;
-  /* Adding hover effect for logo text */
-}
+  .logo-text:hover {
 
-/* Style the logo image and text */
-.logo {
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #fff;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-direction: row;
-}
+    box-shadow: 2px 2px 5px gray;
+    /* Adding hover effect for logo text */
+  }
 
-.logo-img {
-  height: 60px;
-  
-  border-radius: 5px;
-  /* Adjust height as needed */
-}
+  /* Style the logo image and text */
+  .logo {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+  }
 
-/* Style the logo text, initially hidden on larger screens */
-.logo-text {
-  color: #f2f2f2;
-  font-size: 17px;
-  margin-left: 10px;
-  display: none;
-  /* Hidden by default */
-}
+  .logo-img {
+    height: 60px;
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: flex;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+    border-radius: 5px;
+    /* Adjust height as needed */
+  }
 
-/* Add an active class to highlight the current page */
-.active {
-  background-color: #04AA6D;
-  color: white;
-}
+  /* Style the logo text, initially hidden on larger screens */
+  .logo-text {
+    color: #f2f2f2;
+    font-size: 17px;
+    margin-left: 10px;
+    display: none;
+    /* Hidden by default */
+  }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-  display: none;
-}
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: flex;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
 
-/* Dropdown container - needed to position the dropdown content */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
+  /* Add an active class to highlight the current page */
+  .active {
+    background-color: #04AA6D;
+    color: white;
+  }
 
-/* Style the dropdown button to fit inside the topnav */
-.dropdown .dropbtn {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-/* Style the dropdown content (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Style the links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: flex;
-  text-align: left;
-}
-
-/* Add a dark background on topnav links and the dropdown button on hover */
-.topnav a:hover,
-.dropdown:hover .dropbtn {
-  background-color: #555;
-  border-radius: 5px;
-  color: white;
-}
-
-/* Add a grey background to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-
-  .topnav a:not(:first-child),
-  .dropdown .dropbtn {
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
     display: none;
   }
 
-  .topnav a.icon {
-    float: right;
-    display: block;
+  /* Dropdown container - needed to position the dropdown content */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  /* Style the dropdown button to fit inside the topnav */
+  .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
     position: absolute;
-    right: 21px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
   }
 
-  /* Show the logo text on mobile */
-  .topnav .logo .logo-text {
-    display: block;
-  }
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 21px;
-    top: 10px
-  }
-
-  .topnav.responsive a {
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
     float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
     display: flex;
     text-align: left;
   }
 
-  .topnav.responsive .dropdown {
-    float: none;
+  /* Add a dark background on topnav links and the dropdown button on hover */
+  .topnav a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: #555;
+    border-radius: 5px;
+    color: white;
   }
 
-  .topnav.responsive .dropdown-content {
-    position: relative;
+  /* Add a grey background to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
   }
 
-  .topnav.responsive .dropdown .dropbtn {
+  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+  .dropdown:hover .dropdown-content {
     display: block;
-    width: 100%;
-    text-align: left;
   }
-}
+
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 600px) {
+
+    .topnav a:not(:first-child),
+    .dropdown .dropbtn {
+      display: none;
+    }
+
+    .topnav a.icon {
+      float: right;
+      display: block;
+      position: absolute;
+      right: 21px;
+    }
+
+    /* Show the logo text on mobile */
+    .topnav .logo .logo-text {
+      display: block;
+    }
+  }
+
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {
+      position: relative;
+    }
+
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 21px;
+      top: 10px
+    }
+
+    .topnav.responsive a {
+      float: none;
+      display: flex;
+      text-align: left;
+    }
+
+    .topnav.responsive .dropdown {
+      float: none;
+    }
+
+    .topnav.responsive .dropdown-content {
+      position: relative;
+    }
+
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
 }
 
 .open {
@@ -284,8 +284,8 @@ p {
   color: #555;
   font-style: italic;
   color: #4e66f8;
-  
-  
+
+
 }
 
 a:link {
@@ -301,10 +301,10 @@ a:link {
   background-color: #f9f9f9;
   border-radius: 5px;
   max-width: 400px;
-  
-  align-items: flex-start;
-  
 
+  align-items: flex-start;
+
+  transition: all 0.3s ease-in-out;
 
 }
 
@@ -316,10 +316,14 @@ a:link {
   align-items: center;
   margin-bottom: 10px;
 
+
+
 }
 
 .contactinfo-a i {
   margin-right: 10px;
+
+
 }
 
 .contactinfo-a:first-child::before {
@@ -340,11 +344,115 @@ a:link {
   margin-right: 10px;
 }
 
+/*pc*/
+@media screen and (min-width: 900px) {
+  .pclooks {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    background-color: #f9f9f9;
 
+  }
+
+  .contactinfo {
+    padding: 30px;
+    /* Increased padding */
+    border-radius: 10px;
+    /* Larger border radius */
+    max-width: 600px;
+    /* Increase the max width */
+  }
+
+  .contactinfo-a {
+    font-size: 20px;
+    /* Larger font size */
+  }
+
+  .contactinfo-a,
+  .contactinfo-a i,
+  .contactinfo-a:first-child::before,
+  .contactinfo-a:nth-child(2)::before,
+  .contactinfo-a:nth-child(3)::before {
+    margin-right: 15px;
+    /* More space between icon and text */
+  }
+
+
+.times {
+  max-width: 1000px; /* Expand container */
+  padding: 40px; /* Increase padding */
+  border-radius: 10px; /* Larger border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+}
+
+.card-header {
+  padding-bottom: 15px; /* More padding */
+  margin-bottom: 15px; /* Increased margin */
+}
+
+.OpeningT {
+  font-size: 28px; /* Increase title font size */
+}
+
+i.far { 
+  font-size: 50px; /* Larger icon */
+}
+
+/* Table Styles */
+table.openinghours {
+  border-spacing: 0 10px; /* Increased spacing between rows */
+}
+
+table.openinghours th:not(.current-day-day, .open-now),
+table.openinghours td:not(.current-day-day, .open-now) {
+  padding: 15px 20px; /* Larger padding */
+  border-radius: 8px; /* Larger radius for table cells */
+}
+
+table.openinghours th,
+table.openinghours td {
+  padding: 18px 25px; /* Larger table cell padding */
+  font-size: 20px; /* Increase table font size */
+}
+
+}
+
+/*tablet*/
+@media screen and (min-width: 601px) and (max-width: 899px) {
+
+  .pclooks {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    background-color: #f9f9f9;
+
+
+  }
+
+}
+
+/*phone*/
+@media screen and (max-width: 600px) {
+  .times {
+    max-width: 83%;
+    margin: 20px auto;
+  }
+
+  .timeMain {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e9ecef;
+
+  }
+
+  .contactinfo {
+    border-bottom: 1px solid #e9ecef;
+  }
+}
 
 .photos {
   padding-top: 20px;
   background-color: #f9f9f9;
+
   /* Styling for the carousel container */
   .carousel-container {
     width: 80%;
@@ -377,7 +485,7 @@ a:link {
   .carousel-button {
     position: absolute;
     top: 43%;
-   
+
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -421,41 +529,18 @@ a:link {
 
 /* General Styles */
 .times {
-  
-  
+
+
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
 }
-/*pc*/
-@media  screen and (min-width: 601px) {
 
-  .pclooks{
-    display: flex;
-    justify-content: space-around;
-    padding-top: 10px;
-  }
 
-}
-/*phone*/
-@media  screen and (max-width: 600px) {
-  .times{
-    max-width: 83%;
-    margin: 20px auto;
-  }
 
-  .timeMain {
-    padding-bottom: 5px;
-    border-bottom: 1px solid #e9ecef;
-  
-  }
-
-  .contactinfo{
-    border-bottom: 1px solid #e9ecef;
-  }
-}
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -483,11 +568,12 @@ table.openinghours {
   border-spacing: 0 5px;
 }
 
-table.openinghours th:not(.current-day-day,.open-now) ,
-table.openinghours td:not(.current-day-day,.open-now) {
+table.openinghours th:not(.current-day-day, .open-now),
+table.openinghours td:not(.current-day-day, .open-now) {
   padding: 12px 15px;
   text-align: left;
-  border-radius: 5px; /* Add a radius to all table cells */
+  border-radius: 5px;
+  /* Add a radius to all table cells */
 }
 
 table.openinghours th {
@@ -502,22 +588,24 @@ table.openinghours td {
 /* Current Day Highlight */
 .current-day th,
 .current-day td {
-  background-color: #28a745 !important; /* Green for the current day */
+  background-color: #28a745 !important;
+  /* Green for the current day */
   color: white !important;
 
 }
-.current-day-day{
+
+.current-day-day {
   padding: 12px 15px;
   text-align: left;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.open-now{
+.open-now {
   padding: 12px 15px;
   text-align: left;
- border-top-right-radius: 5px;
- border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 
 }
 
@@ -593,9 +681,9 @@ table.openinghours tr#Sunday td {
     font-weight: 600;
   }
 
-  
 
-  
+
+
 }
 
 /*phone or smaller*/
@@ -606,7 +694,7 @@ table.openinghours tr#Sunday td {
     font-size: 11vw;
     /* Larger, bold text for title */
     font-weight: 600;
-    
+
   }
 
 }
