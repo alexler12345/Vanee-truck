@@ -270,7 +270,7 @@ p {
 
 .title {
   display: flex;
-  background-image: url(/images/semi-background.jpg);
+  background-image: url(/images/truck-delivery.png);
   background-size: cover; /* Ensures the image covers the entire div */
   background-position: bottom; /* Centers the background image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
