@@ -6,6 +6,8 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   color: #333;
+  background-color: #f9f9f9;
+
 }
 
 h1 {
@@ -270,10 +272,7 @@ p {
 
 .title {
   display: flex;
-  background-image: url(/images/truck-delivery.png);
-  background-size: cover; /* Ensures the image covers the entire div */
-  background-position: bottom; /* Centers the background image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+
   width: 100%;
   height: 200px; /* Set height based on your design */
   flex-direction: column;
@@ -282,7 +281,9 @@ p {
   padding-bottom: 50px;
   border-bottom: 1px solid #e9ecef;
 
+
 }
+
 
 .title-b {
   font-size: 16px;
@@ -304,7 +305,7 @@ a:link {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: #f9f9f9;
+
   border-radius: 5px;
   max-width: 400px;
 
@@ -356,7 +357,7 @@ a:link {
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
-    background-color: #f9f9f9;
+
 
   }
 
@@ -367,6 +368,8 @@ a:link {
     /* Larger border radius */
     max-width: 600px;
     /* Increase the max width */
+    background-color: #f9f9f9;
+
   }
 
   .contactinfo-a {
@@ -400,7 +403,7 @@ a:link {
   font-size: 28px; /* Increase title font size */
 }
 
-i.far { 
+i.far {
   font-size: 50px; /* Larger icon */
 }
 
@@ -430,8 +433,12 @@ table.openinghours td {
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
-    background-color: #f9f9f9;
 
+
+  }
+
+  .contactinfo{
+    background-color: #f9f9f9;
 
   }
 
@@ -452,12 +459,13 @@ table.openinghours td {
 
   .contactinfo {
     border-bottom: 1px solid #e9ecef;
+    background-color: #f9f9f9;
+
   }
 }
 
 .photos {
   padding-top: 20px;
-  background-color: #f9f9f9;
 
   /* Styling for the carousel container */
   .carousel-container {
@@ -516,7 +524,6 @@ table.openinghours td {
 .maps {
   padding-top: 27px;
   border: 10px;
-  background-color: #f9f9f9;
 
   display: flex;
   justify-content: center;
@@ -560,7 +567,7 @@ table.openinghours td {
   font-weight: bold;
   margin: 0;
 }
- 
+
 i.far {
   color: #333;
 }
@@ -686,6 +693,7 @@ table.openinghours tr#Sunday td {
     border-radius: 5px;
     padding-left: 5px;
     cursor: pointer;
+   padding-left: 10%;
   }
 
 
@@ -706,11 +714,3 @@ table.openinghours tr#Sunday td {
 
 }
 
-@media (prefers-color-scheme: light) {
-  body {}
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  body {}
-}
