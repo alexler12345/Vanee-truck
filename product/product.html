@@ -1,52 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"
+    />
+    <script src="productScript.js"></script>
+    <link rel="stylesheet" href="productStyle.css" />
+    <title>Vanee Truck Wash</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-  <script src="productScript.js"></script>
-  <link rel="stylesheet" href="productStyle.css">
-  <title>Vanee Truck Wash</title>
-</head>
-
-<body>
-
-  <!-- header.html -->
-  <div class="menu">
-    <div class="topnav" id="myTopnav">
-      <a href="/Vanee-truck/index.html" class="logo">
-        <img src="/images/icon.png" alt="Logo" class="logo-img">
-      </a>
-      <a href="/Vanee-truck/product/product.html">Products</a>
-      <a href="#contact">Contact</a>
-      <a href="/Vanee-truck/booking/Bookings.html">Booking</a>
-      <a href="/Vanee-truck/aboutus/about.html">About us</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  <body>
+    <!-- header.html -->
+    <div class="menu">
+      <div class="topnav" id="myTopnav">
+        <a href="/Vanee-truck/index.html" class="logo">
+          <img src="/images/icon.png" alt="Logo" class="logo-img" />
+        </a>
+        <a href="/Vanee-truck/product/product.html">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="/Vanee-truck/booking/Bookings.html">Booking</a>
+        <a href="/Vanee-truck/aboutus/about.html">About us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+          >&#9776;</a
+        >
+      </div>
     </div>
-  </div>
 
+    <!-- Product descriptions with dropdown functionality -->
+    <div class="producttitle">
+      <div class="meep">We offer</div>
+      <div class="subtext">
+        <h3 onclick="toggleDescription(this)">soap</h3>
+        <h4 class="description">
+          Our premium truck soap is specially formulated to break down tough
+          dirt, grease, and grime, ensuring a thorough and safe cleaning of your
+          truck's exterior. It leaves surfaces spotless and shiny, without
+          causing damage to the paint or finish.
+        </h4>
+      </div>
 
-  <div class="producttitle">
-    Products!!!
+      <div class="subtext">
+        <h3 onclick="toggleDescription(this)">citic</h3>
+        <h4 class="description">
+          A powerful citric-based cleaner designed to eliminate stubborn stains,
+          rust, and mineral deposits. It’s perfect for deep-cleaning aluminum
+          surfaces, ensuring a brighter and polished look for your truck’s
+          exterior components.
+        </h4>
+      </div>
 
-  </div>
+      <div class="subtext">
+        <h3 onclick="toggleDescription(this)">pre soak</h3>
+        <h4 class="description">
+          The ultimate first step in your cleaning process. This pre-soak
+          solution penetrates and loosens heavy buildups of dirt, mud, and road
+          grime, making it easier to remove during subsequent wash stages.
+        </h4>
+      </div>
 
+      <div class="subtext">
+        <h3 onclick="toggleDescription(this)">hot rinse</h3>
+        <h4 class="description">
+          Our high-temperature rinse ensures a more effective removal of
+          residual soap and debris, leaving a pristine finish. The heat also
+          helps in drying the surface faster, minimizing water spots.
+        </h4>
+      </div>
 
-  <div class="space">
-  </div>
-  <script src="https://kit.fontawesome.com/f4715f90e0.js" crossorigin="anonymous"></script>
+      <div class="subtext">
+        <h3 onclick="toggleDescription(this)">cold rinse</h3>
+        <h4 class="description">
+          A traditional cold-water rinse for thoroughly flushing away any
+          remaining dirt and cleaning agents. This step ensures no residues are
+          left behind and prepares your truck for additional treatments.
+        </h4>
+      </div>
 
-</body>
+      <div class="subtext">
+        <h3 onclick="toggleDescription(this)">wax</h3>
+        <h4 class="description">
+          Add a layer of protection and shine with our high-quality wax. It
+          creates a hydrophobic barrier that repels water, dust, and
+          contaminants, making future cleanings easier and keeping your truck’s
+          finish looking new.
+        </h4>
+      </div>
 
-<footer class="footer">
-  <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=61558004790927" target="_blank"><i
-        class="fab fa-facebook-f"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
-  <p>&copy; 2024 Vanee Truck Wash. All Rights Reserved.</p>
-</footer>
+      <div class="subtext">
+        <h3 onclick="toggleDescription(this)">undercarriage Wash</h3>
+        <h4 class="description">
+          Targeted cleaning for your truck’s underbody. This wash system removes
+          mud, salt, and road debris from hard-to-reach areas, preventing rust
+          and corrosion to keep your truck in top condition.
+        </h4>
+      </div>
 
+      <div class="subtext">
+        <h3 onclick="toggleDescription(this)">ice melt</h3>
+        <h4 class="description">
+          An effective solution to combat icy buildup on your vehicle. Our ice
+          melt formula is designed to quickly break down and eliminate ice and
+          frost from truck surfaces, ensuring safer handling and improved road
+          safety.
+        </h4>
+      </div>
+
+      <div class="subtext">
+        <h3 onclick="toggleDescription(this)">fire hose</h3>
+        <h4 class="description">
+          High-pressure fire hose cleaning provides an intense and efficient
+          wash, capable of removing even the toughest grime. Ideal for cleaning
+          hard-to-reach areas and giving your truck a deep clean.
+        </h4>
+      </div>
+
+      <div class="subtext">
+        <h3 onclick="toggleDescription(this)">Bug wash</h3>
+        <h4 class="description">
+          Our specially formulated bug wash solution effectively removes
+          stubborn bug splatter and insect residue from your truck’s windshield,
+          grille, and body. It breaks down organic materials without damaging
+          the finish, leaving your vehicle spotless and clear.
+        </h4>
+      </div>
+    </div>
+    <div class="space"></div>
+    <script
+      src="https://kit.fontawesome.com/f4715f90e0.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a
+        href="https://www.facebook.com/profile.php?id=61558004790927"
+        target="_blank"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2024 Vanee Truck Wash. All Rights Reserved.</p>
+  </footer>
 </html>

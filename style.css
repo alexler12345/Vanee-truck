@@ -32,6 +32,7 @@ p {
 /* Basic button style */
 .topnav a:not(.logo, .icon),
 .contactinfo-a,
+
 .prev,
 .next {
   padding: 10px 20px;
@@ -43,6 +44,15 @@ p {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   /* Adding shadow */
 }
+
+.title-a{
+padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
 
 
 /* Hover effect */
@@ -693,7 +703,6 @@ table.openinghours tr#Sunday td {
     border-radius: 5px;
     padding-left: 5px;
     cursor: pointer;
-   padding-left: 10%;
   }
 
 
