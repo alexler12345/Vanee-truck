@@ -17,17 +17,14 @@ p {
 }
 
 /* Custom focus style */
-.topnav a:focus,
-h3:focus {
+.topnav a:focus{
   outline: none;
   box-shadow: 0px 0px 10px rgb(0, 123, 255);
   /* Custom focus shadow */
 }
 
 /* Basic button style */
-.topnav a:not(.logo, .icon),
-h3
- {
+.topnav a:not(.logo, .icon){
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -39,9 +36,7 @@ h3
 }
 
 /* Hover effect */
-.topnav a:hover,
-h3:hover
- {
+.topnav a:hover{
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15);
   /* Reduced shadow on hover */
   transform: translateY(-2px);
@@ -49,8 +44,7 @@ h3:hover
 }
 
 /* Click effect */
-.topnav a:active,
-h3:active {
+.topnav a:active{
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   /* Less shadow when clicked */
   transform: translateY(2px);
@@ -244,44 +238,31 @@ h3:active {
 }
 
 
-.producttitle{
-  border: 10px solid green;
-
+.list{
+ border: 5px solid green;
 }
 
-.subtext{
-  width:min-content;
-  display: flex;
-
+.listG{
+  padding-bottom: 23px;
+  border-bottom: 1px solid #e9ecef;
 }
-
-.description {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-  /* Smoothly transition max-height and padding */
-  padding: 0 0;
-}
-
-.active-description {
-  /* Maximum height for smooth reveal */
-  padding: 10px 0;
-  max-height: 300px;
-  transition: max-height 0.5s ease-in, padding 0.5s ease-in;
-}
-
-/* Adding a hover effect to indicate clickable titles */
 
 h3{
- width:fit-content;
- cursor: pointer;
+
+width: auto;
+  font-size: 27px;
 }
 
-.meep{
-  font-size: 77px;
-  font-style: italic;
-
+h4{
+  font-size: 14px;
 }
+
+
+
+
+
+
+
 
 
 .space {
