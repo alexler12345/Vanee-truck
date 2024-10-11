@@ -268,6 +268,7 @@
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin: 50px auto;
+    border: 5px solid green;
 }
 .form-group {
   margin-bottom: 15px;

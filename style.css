@@ -470,6 +470,7 @@ table.openinghours td {
 
 .photos {
   padding-top: 20px;
+  border: 5px solid green;
 
   /* Styling for the carousel container */
   .carousel-container {
@@ -533,7 +534,7 @@ table.openinghours td {
   justify-content: center;
   padding-bottom: 27px;
   border-bottom: 1px solid #e9ecef;
-
+  border: 5px solid green;
 
 }
 
