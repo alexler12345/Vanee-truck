@@ -357,13 +357,36 @@ a:link {
 
 /*pc*/
 @media screen and (min-width: 900px) {
-  .pclooks {
+
+
+  .pclooks2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pclooksMain{
     display: flex;
     justify-content: space-around;
-    padding-top: 10px;
+  }
 
+.pclooks{
+  width: 41%;
+ 
+}
+
+  .photos{
+    width: 97%;
 
   }
+
+  .contactinfoMain{
+    margin-bottom: 120px;
+  }
+
+
+
+
 
   .contactinfo {
     padding: 30px;
@@ -535,6 +558,7 @@ table.openinghours td {
   padding-bottom: 27px;
   border-bottom: 1px solid #e9ecef;
   border: 5px solid green;
+  height: 500px;
 
 }
 
