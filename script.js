@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Run includeHTML when the DOM is fully loaded
-
+setInterval(() => moveSlide(1), 5000); // Auto-slide every 5 seconds
 
 
 // Navbar responsive toggle

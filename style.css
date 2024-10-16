@@ -3,11 +3,16 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   color: #333;
   background-color: #f9f9f9;
+}
 
+.pclooksMain {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px;
 }
 
 h1 {
@@ -32,7 +37,6 @@ p {
 /* Basic button style */
 .topnav a:not(.logo, .icon),
 .contactinfo-a,
-
 .prev,
 .next {
   padding: 10px 20px;
@@ -44,10 +48,6 @@ p {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   /* Adding shadow */
 }
-
-
-
-
 
 /* Hover effect */
 .topnav a:hover,
@@ -71,12 +71,9 @@ p {
   /* Less shadow when clicked */
   transform: translateY(2px);
   /* Move the button down slightly */
-
 }
 
 .menu {
-  
-
   /* Add a black background color to the top navigation */
   .topnav {
     background: linear-gradient(90deg, #333 0%, #555 100%);
@@ -95,11 +92,7 @@ p {
     box-shadow: 2px 2px 5px gray;
   }
 
-
-
-
   .logo-text:hover {
-
     box-shadow: 2px 2px 5px gray;
     /* Adding hover effect for logo text */
   }
@@ -118,11 +111,16 @@ p {
   }
 
   .logo-img {
-    height: 60px;
-
+    height: auto;
+    max-height: 50px;
+    /*Adjustforsmallerscreens*/
     border-radius: 5px;
-    /* Adjust height as needed */
-  }
+     -webkit-border-radius: 5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+}
+  
 
   /* Style the logo text, initially hidden on larger screens */
   .logo-text {
@@ -146,7 +144,7 @@ p {
 
   /* Add an active class to highlight the current page */
   .active {
-    background-color: #04AA6D;
+    background-color: #04aa6d;
     color: white;
   }
 
@@ -214,7 +212,6 @@ p {
 
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
   @media screen and (max-width: 600px) {
-
     .topnav a:not(:first-child),
     .dropdown .dropbtn {
       display: none;
@@ -239,15 +236,26 @@ p {
       position: relative;
     }
 
+
+
     .topnav.responsive a.icon {
       position: absolute;
       right: 21px;
-      top: 10px
+      top: 10px;
     }
 
     .topnav.responsive a {
       float: none;
       display: flex;
+      text-align: left;
+    }
+
+    .topnav.responsive {
+      display: block;
+    }
+  
+    .topnav.responsive a {
+      display: block;
       text-align: left;
     }
 
@@ -271,23 +279,19 @@ p {
   display: flex;
   justify-content: center;
   padding-top: 30px;
-
 }
 
 .title {
   display: flex;
 
   width: 100%;
-  height: 200px; /* Set height based on your design */
+
   flex-direction: column;
   align-items: center;
   padding-top: 16px;
   padding-bottom: 50px;
   border-bottom: 1px solid #e9ecef;
-
-
 }
-
 
 .title-b {
   font-size: 16px;
@@ -295,15 +299,11 @@ p {
   color: #555;
   font-style: italic;
   color: #4e66f8;
-
-
 }
 
 a:link {
   text-decoration: none !important;
 }
-
-
 
 .contactinfo {
   display: flex;
@@ -316,7 +316,6 @@ a:link {
   align-items: flex-start;
 
   transition: all 0.3s ease-in-out;
-
 }
 
 .contactinfo-a {
@@ -326,67 +325,66 @@ a:link {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-
-
-
 }
 
 .contactinfo-a i {
   margin-right: 10px;
-
-
 }
 
 .contactinfo-a:first-child::before {
-  content: '\f095';
-  font-family: 'FontAwesome';
+  content: "\f095";
+  font-family: "FontAwesome";
   margin-right: 10px;
 }
 
 .contactinfo-a:nth-child(2)::before {
-  content: '\f0e0';
-  font-family: 'FontAwesome';
+  content: "\f0e0";
+  font-family: "FontAwesome";
   margin-right: 10px;
 }
 
 .contactinfo-a:nth-child(3)::before {
-  content: '\f3c5';
-  font-family: 'FontAwesome';
+  content: "\f3c5";
+  font-family: "FontAwesome";
   margin-right: 10px;
+}
+
+.pclooks{
+  display: flex;
+  flex-direction: column;
 }
 
 /*pc*/
 @media screen and (min-width: 900px) {
-
-
-  .pclooks2{
+  .pclooks2 {
     width: 50%;
     display: flex;
     flex-direction: column;
   }
 
-  .pclooksMain{
+  .pclooksMain {
     display: flex;
     justify-content: space-around;
+    border-bottom: 1px solid #e9ecef;
   }
 
-.pclooks{
-  width: 41%;
- 
-}
+  .pclooks {
+    width: 41%;
+  }
 
-  .photos{
+  .timeMain {
+    padding-top: 23px;
+  }
+
+  .photos {
     width: 97%;
-
+    padding-top: 51px;
+    margin-left: 22px;
   }
 
-  .contactinfoMain{
+  .contactinfoMain {
     margin-bottom: 120px;
   }
-
-
-
-
 
   .contactinfo {
     padding: 30px;
@@ -396,7 +394,6 @@ a:link {
     max-width: 600px;
     /* Increase the max width */
     background-color: #f9f9f9;
-
   }
 
   .contactinfo-a {
@@ -413,62 +410,63 @@ a:link {
     /* More space between icon and text */
   }
 
+  .times {
+    max-width: 1000px; /* Expand container */
+    padding: 40px; /* Increase padding */
+    border-radius: 10px; /* Larger border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  }
 
-.times {
-  max-width: 1000px; /* Expand container */
-  padding: 40px; /* Increase padding */
-  border-radius: 10px; /* Larger border radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
-}
+  .card-header {
+    padding-bottom: 15px; /* More padding */
+    margin-bottom: 15px; /* Increased margin */
+  }
 
-.card-header {
-  padding-bottom: 15px; /* More padding */
-  margin-bottom: 15px; /* Increased margin */
-}
+  .OpeningT {
+    font-size: 28px; /* Increase title font size */
+  }
 
-.OpeningT {
-  font-size: 28px; /* Increase title font size */
-}
+  i.far {
+    font-size: 50px; /* Larger icon */
+  }
 
-i.far {
-  font-size: 50px; /* Larger icon */
-}
+  /* Table Styles */
+  table.openinghours {
+    border-spacing: 0 10px; /* Increased spacing between rows */
+  }
 
-/* Table Styles */
-table.openinghours {
-  border-spacing: 0 10px; /* Increased spacing between rows */
-}
+  table.openinghours th:not(.current-day-day, .open-now),
+  table.openinghours td:not(.current-day-day, .open-now) {
+    padding: 15px 20px; /* Larger padding */
+    border-radius: 8px; /* Larger radius for table cells */
+  }
 
-table.openinghours th:not(.current-day-day, .open-now),
-table.openinghours td:not(.current-day-day, .open-now) {
-  padding: 15px 20px; /* Larger padding */
-  border-radius: 8px; /* Larger radius for table cells */
-}
-
-table.openinghours th,
-table.openinghours td {
-  padding: 18px 25px; /* Larger table cell padding */
-  font-size: 20px; /* Increase table font size */
-}
-
+  table.openinghours th,
+  table.openinghours td {
+    padding: 18px 25px; /* Larger table cell padding */
+    font-size: 20px; /* Increase table font size */
+  }
 }
 
 /*tablet*/
 @media screen and (min-width: 601px) and (max-width: 899px) {
-
   .pclooks {
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
-
-
   }
 
-  .contactinfo{
+  .photos{
+    padding-top: 25px;
+  }
+
+  .maps{
+    margin-top: 50px;
+  }
+
+  .contactinfo {
     background-color: #f9f9f9;
-
   }
-
 }
 
 /*phone*/
@@ -481,19 +479,25 @@ table.openinghours td {
   .timeMain {
     padding-bottom: 5px;
     border-bottom: 1px solid #e9ecef;
-
+    order: 2;
   }
 
   .contactinfo {
     border-bottom: 1px solid #e9ecef;
     background-color: #f9f9f9;
+  }
 
+  .maps {
+    border-bottom: 1px solid #e9ecef;
+    order: 1;
+  }
+
+  .pclooksMain{
+    grid-template-columns: 1fr; /* One column layout */
   }
 }
 
 .photos {
-  padding-top: 20px;
-  border: 5px solid green;
 
   /* Styling for the carousel container */
   .carousel-container {
@@ -544,9 +548,6 @@ table.openinghours td {
   .next {
     right: 10px;
   }
-
-
-
 }
 
 .maps {
@@ -556,10 +557,8 @@ table.openinghours td {
   display: flex;
   justify-content: center;
   padding-bottom: 27px;
-  border-bottom: 1px solid #e9ecef;
-  border: 5px solid green;
-  height: 500px;
 
+  height: 700px;
 }
 
 .maps-i {
@@ -567,7 +566,6 @@ table.openinghours td {
   border-radius: 5px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 
 /* General Styles */
 .times {
@@ -579,8 +577,6 @@ table.openinghours td {
   transition: all 0.3s ease-in-out;
 }
 
-
-
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -591,7 +587,7 @@ table.openinghours td {
 }
 
 .OpeningT {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   color: #333;
   font-weight: bold;
   margin: 0;
@@ -631,7 +627,6 @@ table.openinghours td {
   background-color: #28a745 !important;
   /* Green for the current day */
   color: white !important;
-
 }
 
 .current-day-day {
@@ -646,7 +641,6 @@ table.openinghours td {
   text-align: left;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-
 }
 
 /* Open Now and Closed Now Labels */
@@ -684,8 +678,7 @@ table.openinghours tr#Sunday td {
   font-weight: bold;
 }
 
-
-.space {
+.reviews {
   padding-top: 500px;
 }
 
@@ -708,7 +701,7 @@ table.openinghours tr#Sunday td {
 }
 
 .social-icons a:hover {
-  color: #04AA6D;
+  color: #04aa6d;
 }
 
 /*pc or lager*/
@@ -723,10 +716,6 @@ table.openinghours tr#Sunday td {
     padding-left: 5px;
     cursor: pointer;
   }
-
-
-
-
 }
 
 /*phone or smaller*/
@@ -737,8 +726,5 @@ table.openinghours tr#Sunday td {
     font-size: 11vw;
     /* Larger, bold text for title */
     font-weight: 600;
-
   }
-
 }
-
