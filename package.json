@@ -1,0 +1,33 @@
+{
+  "name": "vanee-truck",
+  "version": "1.0.0",
+  "description": "this is at http://testing-dragon.us.to/",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexler12345/Vanee-truck.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexler12345/Vanee-truck/issues"
+  },
+  "homepage": "https://github.com/alexler12345/Vanee-truck#readme",
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.5.1",
+    "@aws-amplify/backend-cli": "^1.3.0",
+    "aws-cdk": "^2.164.1",
+    "aws-cdk-lib": "^2.164.1",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.24.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "aws-amplify": "^6.6.7"
+  }
+}
